@@ -1,9 +1,11 @@
 Bitmap.prototype.fill = function(row, col, new_color) {
     const old_color = this.grid[row][col];
+    
     if(old_color === new_color) return;
     this.setColor(row, col, new_color);
 
     var queue = [];
+    console.log("old:" + old_color + " / " + "new_color: " + new_color);
     // The rest of the flood fill algorithm is given in pseudo-code below.
     // Convert the following pseudo-code comments into javascript
     // to complete the implementation of this method.
